@@ -239,13 +239,13 @@ external tools.
 
 Note that ``--json`` will output a flat list of all packages with
 their immediate dependencies. This is not very useful in itself. To
-obtain nested json, use ``--json-tree``
+obtain nested json that Snyk can understand, use ``--snyk``
 
 `New in ver. 0.11.0`
 
 .. code-block:: bash
 
-    $ pipdeptree --json-tree
+    $ pipdeptree --snyk
 
 
 Visualizing the dependency graph
@@ -267,9 +267,9 @@ Note that ``graphviz`` is an optional dependency ie. required only if
 you want to use ``--graph-output``.
 
 Since version ``2.0.0b1``, ``--package`` and ``--reverse`` flags are
-supported for all output formats ie. text, json, json-tree and graph.
+supported for all output formats ie. text, json, snyk and graph.
 
-In earlier versions, ``--json``, ``--json-tree`` and
+In earlier versions, ``--json``, ``--snyk`` and
 ``--graph-output`` options override ``--package`` and ``--reverse``.
 
 
@@ -279,7 +279,7 @@ Usage
 .. code-block:: bash
 
     usage: pipdeptree [-h] [-v] [-f] [-a] [-l] [-u] [-w [{silence,suppress,fail}]]
-                      [-r] [-p PACKAGES] [-e PACKAGES] [-j] [--json-tree]
+                      [-r] [-p PACKAGES] [-e PACKAGES] [-j] [--snyk]
                       [--graph-output OUTPUT_FORMAT]
     
     Dependency tree of the installed python packages
@@ -310,10 +310,8 @@ Usage
       -j, --json            Display dependency tree as json. This will yield "raw"
                             output that may be used by external tools. This option
                             overrides all other options.
-      --json-tree           Display dependency tree as json which is nested the
-                            same way as the plain text output printed by default.
-                            This option overrides all other options (except
-                            --json).
+      --snyk                Display dependency tree as json which can be consumed 
+                            by Snyk. This option overrides all other options.
       --graph-output OUTPUT_FORMAT
                             Print a dependency graph in the specified output
                             format. Available are all formats supported by
