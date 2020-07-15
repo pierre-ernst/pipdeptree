@@ -3,7 +3,8 @@ pipdeptree
 
 .. image:: https://travis-ci.org/naiquevin/pipdeptree.svg?branch=master
    :target: https://travis-ci.org/naiquevin/pipdeptree
-
+.. image:: https://snyk.io/test/github/pierre-ernst/pipdeptree/badge.svg?targetFile=dev-requirements.txt
+   :target: https://snyk.io/test/github/pierre-ernst/pipdeptree?targetFile=dev-requirements.txt
 
 ``pipdeptree`` is a command line utility for displaying the installed
 python packages in form of a dependency tree. It works for packages
