@@ -25,28 +25,7 @@ Installation
 
 .. code-block:: bash
 
-    $ pip install pipdeptree
-
-This will install the latest stable version which is ``1.0.0``. This
-version works well for the basic use case but has some limitations.
-
-An improved version ``2.0.0b1`` has been released as well. But as it's
-a beta version, pip will not find it by default. To install the latest
-beta version specify the ``--pre`` flag.
-
-.. code-block:: bash
-
-    $ sudo pip install --pre pipdeptree
-
-The current stable version is tested with ``2.7``, ``3.4``, ``3.5``
-and ``3.6``.
-
-The ``v2beta`` branch has been tested with Python ``3.4``, ``3.5``, ``3.6``, ``3.7``,
-``3.8`` as well as ``2.7``.
-
-Python ``2.6`` is way past it's end of life but if you ever find
-yourself stuck on a legacy environment, version ``0.9.0`` *might*
-work.
+    $ pip3 install -r dev-requirements.txt 
 
 
 Usage and examples
